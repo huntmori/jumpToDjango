@@ -28,7 +28,7 @@ def answer_create(request, question_id):
     :return:
     """
     question = get_object_or_404(Question, pk=question_id)
-    #question.answer_set.create(content=request.POST.get('content'), created_datetime=timezone.now())
+    # question.answer_set.create(content=request.POST.get('content'), created_datetime=timezone.now())
     answer = Answer(question=question, content=request.POST.get('content'), created_datetime=timezone.now())
     answer.save()
     return redirect('pybo:detail', question_id=question_id)
