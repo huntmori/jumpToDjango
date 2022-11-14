@@ -1,0 +1,17 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+    <head>
+        <!--required meta tags-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-sacle=1, shrink-to-fit=no">
+        <!--bootstrap css-->
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+        <!--pybo css-->
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
